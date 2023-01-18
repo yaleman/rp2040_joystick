@@ -2,15 +2,16 @@
 #![no_std]
 #![no_main]
 
-use fugit::ExtU32;
-use usbd_human_interface_device::device::consumer::MultipleConsumerReport;
 
-use cortex_m::prelude::_embedded_hal_timer_CountDown;
 // Ensure we halt the program on panic (if we don't mention this crate it won't
 // be linked)
 use panic_halt as _;
 
-// use hal::prelude::*;
+
+use fugit::ExtU32;
+use usbd_human_interface_device::device::consumer::MultipleConsumerReport;
+
+use cortex_m::prelude::_embedded_hal_timer_CountDown;
 
 // A shorter alias for the Peripheral Access Crate, which provides low-level
 // register access
@@ -23,11 +24,6 @@ use rp_pico::hal;
 // The macro for our start-up function
 use rp_pico::entry;
 
-// A shorter alias for the Peripheral Access Crate, which provides low-level
-// register access
-// use hal::pac;
-
-
 // Some traits we need
 // use embedded_hal::digital::v2::OutputPin;
 // use rp2040_hal::clocks::Clock;
@@ -37,13 +33,11 @@ use rp_pico::entry;
 // use hal::pac::CorePeripherals;
 // use cortex_m::interrupt::free as disable_interrupts;
 
-// use hal::usb::UsbBus;
 use usb_device::bus::UsbBusAllocator;
-
 
 use embedded_hal::digital::v2::*;
 // use embedded_hal::prelude::*;
-use usbd_human_interface_device::page::Consumer;
+use usbd_human_interface_device::page::{Consumer, Game};
 
 // USB Device support
 use usb_device::class_prelude::*;
