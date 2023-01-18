@@ -1,0 +1,22 @@
+[package]
+name = "rp2040_joystick"
+version = "0.1.0"
+edition = "2021"
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+cortex-m = "0.7.7"
+cortex-m-rt = "0.7.2"
+embedded-hal = "0.2.7"
+fugit = "0.3.6"
+panic-halt = "0.2.0"
+rp-pico = "0.6.0"
+rp2040-boot2 = "0.2.1"
+rp2040-hal = "0.7.0"
+usb-device = "0.2.9"
+usbd-hid = "0.6.1"
+usbd-human-interface-device = "0.3.1"
+
+
+[rust-analyzer]
+"checkOnSave.allTargets" = false
