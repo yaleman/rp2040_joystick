@@ -37,7 +37,7 @@ use usb_device::bus::UsbBusAllocator;
 
 use embedded_hal::digital::v2::*;
 // use embedded_hal::prelude::*;
-use usbd_human_interface_device::page::{Consumer, Game};
+use usbd_human_interface_device::page::{Consumer};
 
 // USB Device support
 use usb_device::class_prelude::*;

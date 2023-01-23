@@ -14,3 +14,7 @@ Link PicoGamepad into ~/Documents/Arduino/libraries/ on macos:
 ```shell
 ln -s "$(pwd)/arduino/PicoGamepad" ~/Documents/Arduino/libraries/
 ```
+
+## Hardware ideas
+
+- <https://thangs.com/designer/IronArthur/3d-model/Object-77B-v2-14932>

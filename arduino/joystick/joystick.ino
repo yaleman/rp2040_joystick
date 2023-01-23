@@ -15,6 +15,8 @@
 
   https://www.gitlab.com/realrobots/PicoGamepad
 */
+
+#include <ArduinoSTL.h>
 #include <PicoGamepad.h>
 
 
@@ -25,6 +27,7 @@ PicoGamepad gamepad;
 int val;
 
 // GPIO assignment
+// The ADCs are on pins 26-29 - https://raspberrypi.github.io/pico-sdk-doxygen/group__hardware__adc.html
 #define XPOT 26
 //#define YPOT 27
 //#define ZPOT 28
@@ -36,6 +39,8 @@ const int potPins[] = {
  };
 const int numOfPots = 3;
 
+// start from GPIO0 and move up from there, you can use up to GPIO25 (26 pins) if you want to use X/Y/Z Axes
+// https://raspberrypi.github.io/pico-sdk-doxygen/group__hardware__gpio.html
 const int numOfButtonPins = 4;
 
 void setup() {
